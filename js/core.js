@@ -160,10 +160,10 @@ function HoublonVaViewModel() {
 
 		// Long
 		if (isFrench) {
-			self.Description("Houblon va? est une modeste application Android pour localiser la microbrasserie la plus proche de soi. Pour l'instant, seules les microbrasseries du Québec sont référenciées.");
+			self.Description("Houblon va? est une application web pour localiser la microbrasserie la plus proche de soi. Pour l'instant, seules les microbrasseries du Québec sont référenciées.");
 		}
 		else {
-			self.Description("Houblon va? is a small Android app to find the closest microbrewery from you. Right now, it only have Québec's micros.");
+			self.Description("Houblon va? is a web application to find the closest microbrewery from you. Right now, it only have Québec's micros.");
 		}
 	}
 }

@@ -1,147 +1,188 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
 body {
-  color: #5a5a5a;
+    color: #5a5a5a;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Pad the edges of the mobile views a bit */
 .marketing {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 86px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 86px;
 }
 .marketing .col-lg-6 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .marketing h2 {
-  font-weight: normal;
+    font-weight: normal;
 }
 .marketing .col-lg-6 p {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+.logo-chad {
+    margin-top: 17px;
+    float:left;
+    height: 50px;
+    width: 144px;
+    background-image: url("../images/chad.png");
+    transition: all 0.3s ease;
 
+}
+
+.logo-chad:hover {
+    background-image: url("../images/chad-color.png");
+}
+
+.logo-laval {
+    float:left;
+    margin-top: 17px;
+    height: 60px;
+    width: 140px;
+    background-image: url("../images/laval.png");
+    transition: all 0.3s ease;
+
+}
+
+.logo-laval:hover {
+    background-image: url("../images/laval-color.png");
+}
+
+.logo-coop {
+    float:left;
+    margin-top: 16px;
+    height: 62px;
+    width: 141px;
+    background-image: url("../images/la-coop.png");
+    transition: all 0.3s ease;
+
+}
+
+.logo-coop:hover {
+    background-image: url("../images/la-coop-couleur.png");
+}
+
+.logo-cbc {
+    float:left;
+    height: 91px;
+    width: 85px;
+    background-image: url("../images/cbc.png");
+    transition: all 0.3s ease;
+
+}
+
+.logo-cbc:hover {
+    background-image: url("../images/cbc-couleur.png");
+}
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; 
+    margin: 80px 0; 
 }
 .featurette {
-  padding-top: 25px;
-  overflow: hidden;
+    padding-top: 25px;
+    overflow: hidden;
 }
 .featurette-image {
-  margin-top: -25px; 
+    margin-top: -25px; 
 }
 .featurette-image.pull-left {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 .featurette-image.pull-right {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 .featurette-heading {
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .profession-title {
-  margin-top: 0px
+    margin-top: 0px
 }
 
-.logo-margin {
-  margin-left: 18px
-}
+@media (max-width: 1000px) {
+    .featurette-image.pull-left,
+    .featurette-image.pull-right {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        float: none;
+    }
 
-@media screen and (max-width: 1000px) {
-  .featurette-image.pull-left,
-  .featurette-image.pull-right {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    float: none;
-  }
+    .featurette-heading {
+        margin-top: 20px;
+        text-align: center;
+    }
 
-  .featurette-heading {
-    margin-top: 20px;
-    text-align: center;
-  }
+    .lead {
+        text-align: center;
+        margin-bottom: 0px;
+    }
 
-  .lead {
-    text-align: center;
-    margin-bottom: 0px;
-  }
-
-  .featurette-divider {
-    margin: 30px 0px;
-  }
+    .featurette-divider {
+        margin: 30px 0px;
+    }
 }
 
 /* Header
 -----------------------------*/
 
 header {
-  background-image: url("../images/header.jpg");
-  background-position: center;
-  height: 700px;
-  padding-bottom: 20px;
+    background-image: url("../images/header.jpg");
+    background-position: center;
+    height: 700px;
+    padding-bottom: 20px;
 }
 
 #frame {
-  height: 350px;
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  left: -504px;
-  top: 91px;
+    height: 350px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: -504px;
+    top: 91px;
 
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  background-clip: padding-box;
-  -webkit-bg-clip: padding-box;
-  -moz-bg-clip: padding;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    -webkit-bg-clip: padding-box;
+    -moz-bg-clip: padding;
 }
 
 #frame:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 1400px) {
-  header {
-    background-position-x: 0px;
-  }
+@media (max-width: 1400px) {
+    header {
+        background-position: 0px auto;
+    }
 
-  #frame {
-    margin-left: 0;
-    margin-right: 0;
-    left: 277px;
-    top: 91px;
-  }
+    #frame {
+        margin-left: 0;
+        margin-right: 0;
+        left: 277px;
+        top: 91px;
+    }
 }
 
-@media screen and (max-width: 1000px) {
-  header {
-    background-position-x: -200px;
-  }
+@media (max-width: 1000px) {
+    header {
+        background-position: -200px auto;
+    }
 
-  #frame {
-    margin-left: 0;
-    margin-right: 0;
-    left: 77px;
-    top: 91px;
-  }
+    #frame {
+        margin-left: 0;
+        margin-right: 0;
+        left: 77px;
+        top: 91px;
+    }
 }
 
 
@@ -149,59 +190,59 @@ header {
 -----------------------------*/
 
 footer {
-  background-image: url("../images/footer.jpg");
-  background-position: center;
-  background-position-y: bottom;
-  height: 1200px;
-  padding-top: 1170px;
-  color: #ccc;
+    background-image: url("../images/footer.jpg");
+    background-position: center;
+    background-position-y: bottom;
+    height: 1200px;
+    padding-top: 1170px;
+    color: #ccc;
 }
 
 footer a {
-  color: #ccc;
+    color: #ccc;
 }
 
 footer a:hover,
 footer a:active,
 footer a:visited {
-  color: #ccc;
+    color: #ccc;
 }
 
 /* Popover - info
 ---------------------------*/
 
 .popover {
-  max-width: none;
+    max-width: none;
 }
 
 .popover-title {
-  font-weight: bold;
-  font-size: 18px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .popover ul {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .social {
-  float: left;
-  margin: 10px;
+    float: left;
+    margin: 10px;
 }
 
 .translator {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
-  /* Remve the edge padding needed for mobile */
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    /* Remve the edge padding needed for mobile */
+    .marketing {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
