@@ -1,4 +1,1 @@
-Home
-====
-
-Site web www.philippelavoie.com
+Mon Site Web
