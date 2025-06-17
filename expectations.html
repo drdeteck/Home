@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Art of Setting Expectations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #48cae4;
+        }
+        .quiz-option {
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .quiz-option:hover {
+            transform: translateY(-4px);
+        }
+        .quiz-correct {
+            background-color: #2dd4bf !important;
+            color: white !important;
+            border-color: #2dd4bf !important;
+        }
+        .quiz-incorrect {
+            background-color: #f43f5e !important;
+            color: white !important;
+            border-color: #f43f5e !important;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- 
+        Chosen Color Palette: "Brilliant Blues" with a vibrant accent.
+        - Deep Blue: #004e92
+        - Medium Blue: #0077b6
+        - Light Blue: #48cae4
+        - Pale Blue: #ade8f4
+        - Vibrant Orange Accent: #fca311
+        - Text Slate: #334155
+        - Background Slate: #f8fafc
+
+        Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All diagrams are built with structured HTML/CSS and all charts are rendered on Canvas elements by Chart.js.
+    -->
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section 1: Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">The Art of Expectation Setting</h1>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">A visual guide for managers to transform ambiguity into action and drive team performance.</p>
+        </header>
+
+        <!-- Section 2: The Core Concepts -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">The Three Pillars of Performance</h2>
+                <p class="text-md text-slate-500">Understanding the distinction between Objectives, Expectations, and Feedback is the first step toward clarity.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Objective Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#004e92]">
+                    <h3 class="text-xl font-bold text-[#004e92] mb-3">1. Objective</h3>
+                    <p class="text-slate-600 font-medium mb-4">The Destination</p>
+                    <p class="text-slate-600">The high-level, overarching goal. It's the "what" you want to achieve, defined using the SMART framework (Specific, Measurable, Achievable, Relevant, Time-bound).</p>
+                </div>
+                <!-- Expectation Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#0077b6]">
+                    <h3 class="text-xl font-bold text-[#0077b6] mb-3">2. Expectation</h3>
+                    <p class="text-slate-600 font-medium mb-4">The Roadmap & Rules</p>
+                    <p class="text-slate-600">Proactive and future-focused. These are the detailed standards, behaviors, and deliverables required to reach the objective. They define what success looks like and how to get there.</p>
+                </div>
+                <!-- Feedback Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-[#48cae4]">
+                    <h3 class="text-xl font-bold text-[#48cae4] mb-3">3. Feedback</h3>
+                    <p class="text-slate-600 font-medium mb-4">The Rear-View Mirror</p>
+                    <p class="text-slate-600">Reactive and past-focused. This is a review of performance that has already happened, used for coaching and improvement. You *give* feedback, but you *set* expectations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The "What" vs "How" -->
+        <section class="mb-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Deconstructing Expectations</h2>
+                <p class="text-md text-slate-500">Effective expectations are a blend of concrete results and desired behaviors.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-[#fca311] mb-2">The "WHAT"</h4>
+                        <p class="text-slate-700 font-semibold text-lg">Focuses on Deliverables & Outputs</p>
+                        <ul class="list-disc list-inside text-slate-600 mt-4 space-y-2">
+                            <li>The tangible results of the work.</li>
+                            <li>The final product or completed task.</li>
+                            <li>Example: "Successfully implement the new user authentication module."</li>
+                        </ul>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-[#0077b6] mb-2">The "HOW"</h4>
+                        <p class="text-slate-700 font-semibold text-lg">Focuses on Behaviors & Standards</p>
+                        <ul class="list-disc list-inside text-slate-600 mt-4 space-y-2">
+                            <li>The processes and standards followed.</li>
+                            <li>Collaboration, communication, and adherence to values.</li>
+                            <li>Example: "Adhere to the Definition of Done (DoD) for all pull requests."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Workshop Timeline Chart -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Workshop at a Glance</h2>
+                <p class="text-md text-slate-500">A visual breakdown of the 60-minute workshop, balancing theory and practical application.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="chart-container">
+                    <canvas id="workshopTimelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Interactive Quiz -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Test Your Knowledge</h2>
+                <p class="text-md text-slate-500">Is it a forward-looking guide or a backward-looking review? Let's find out.</p>
+            </div>
+            <div id="quiz-container" class="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto">
+                <p id="quiz-progress" class="text-right text-sm font-semibold text-slate-500 mb-4">Question 1 of 7</p>
+                <p id="quiz-question" class="text-xl text-center font-medium text-slate-700 mb-8 min-h-[6rem] flex items-center justify-center"></p>
+                <div id="quiz-options" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <button data-answer="expectation" class="quiz-option text-lg font-bold py-4 px-6 rounded-lg border-2 border-slate-300 text-slate-700 bg-slate-100">Expectation</button>
+                    <button data-answer="feedback" class="quiz-option text-lg font-bold py-4 px-6 rounded-lg border-2 border-slate-300 text-slate-700 bg-slate-100">Feedback</button>
+                </div>
+                <div id="quiz-feedback" class="text-center min-h-[2rem] mb-4"></div>
+                <div class="text-center">
+                    <button id="quiz-next" class="bg-[#fca311] text-white font-bold py-2 px-8 rounded-full hover:bg-opacity-90 transition hidden">Next Question</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: The Performance Highway -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">The Performance Highway</h2>
+                <p class="text-md text-slate-500">A clear path from high-level goals to successful outcomes.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-md text-center">
+                    <p class="text-xs font-semibold text-[#004e92] uppercase">Start Here</p>
+                    <h4 class="text-xl font-bold text-slate-800">SMART Objective</h4>
+                    <p class="text-slate-600">The clearly defined destination.</p>
+                </div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                        <div>
+                            <p class="text-xs font-semibold text-[#fca311] uppercase">Roadmap</p>
+                            <h4 class="text-xl font-bold text-slate-800">"What" Expectations</h4>
+                            <p class="text-slate-600">Specific results & deliverables.</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-4">
+                            <p class="text-xs font-semibold text-[#0077b6] uppercase">Rules of the Road</p>
+                            <h4 class="text-xl font-bold text-slate-800">"How" Expectations</h4>
+                            <p class="text-slate-600">Behaviors, processes & standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="bg-teal-400 text-white rounded-xl shadow-lg p-6 w-full max-w-md text-center">
+                    <p class="text-xs font-semibold uppercase">Destination</p>
+                    <h4 class="text-xl font-bold">Goal Achieved</h4>
+                    <p>Successful outcome driven by clarity.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 7: Case Study -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Case Study: Developer's Blueprint</h2>
+                <p class="text-md text-slate-500">Applying the framework to a C# .NET and React developer.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="mb-8 p-4 bg-slate-100 rounded-lg">
+                    <p class="text-sm font-semibold text-slate-500">SMART OBJECTIVE:</p>
+                    <p class="text-lg font-bold text-[#004e92]">"Successfully deliver the new 'Product Catalog' feature by end of Q3 with a 95% pass rate on acceptance criteria."</p>
+                </div>
+                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-2xl font-bold text-[#fca311] mb-4">The "WHAT" Expectations</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-[#fca311] font-bold mr-3">✓</span><span class="text-slate-700">Develop C# .NET API endpoints for product data by Aug 30th.</span></li>
+                            <li class="flex items-start"><span class="text-[#fca311] font-bold mr-3">✓</span><span class="text-slate-700">Implement responsive React frontend components by Sept 15th.</span></li>
+                            <li class="flex items-start"><span class="text-[#fca311] font-bold mr-3">✓</span><span class="text-slate-700">Ensure all code passes tests (min. 80% coverage) and DoD.</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-[#0077b6] mb-4">The "HOW" Expectations</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-[#0077b6] font-bold mr-3">✓</span><span class="text-slate-700">Actively participate in daily stand-ups with clear updates.</span></li>
+                            <li class="flex items-start"><span class="text-[#0077b6] font-bold mr-3">✓</span><span class="text-slate-700">Conduct thorough, constructive code reviews for peers.</span></li>
+                            <li class="flex items-start"><span class="text-[#0077b6] font-bold mr-3">✓</span><span class="text-slate-700">Proactively communicate any potential blockers or delays.</span></li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Expectation Architect - Gemini API Feature -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">✨ Expectation Architect: Draft with AI ✨</h2>
+                <p class="text-md text-slate-500">Input a key objective, and our AI will help you brainstorm potential "What" (results) and "How" (behaviors) expectations.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+                <div class="mb-6">
+                    <label for="objectiveInput" class="block text-slate-700 text-lg font-semibold mb-2">Enter your objective here:</label>
+                    <textarea id="objectiveInput" rows="4" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0077b6] text-slate-700" placeholder="e.g., 'Improve team productivity by 15% in Q4'"></textarea>
+                </div>
+                <div class="text-center mb-8">
+                    <button id="generateExpectationsBtn" class="bg-[#fca311] text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition flex items-center justify-center mx-auto">
+                        <span id="buttonText">Generate Expectations</span>
+                        <div id="loadingSpinner" class="spinner ml-3 hidden"></div>
+                    </button>
+                </div>
+                <div id="expectationOutput" class="min-h-[100px] bg-slate-50 rounded-lg p-6 border border-slate-200">
+                    <p class="text-slate-500 italic">Generated expectations will appear here...</p>
+                </div>
+                <div id="errorMessage" class="text-rose-500 text-center mt-4 hidden"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (typeof label !== 'string' || label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine.length > 0) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                        },
+                        backgroundColor: '#334155',
+                        titleFont: { size: 14, weight: 'bold' },
+                        bodyFont: { size: 12 },
+                        padding: 10,
+                        cornerRadius: 4,
+                        displayColors: false,
+                    }
+                }
+            };
+
+            const workshopTimelineCtx = document.getElementById('workshopTimelineChart');
+            if (workshopTimelineCtx) {
+                const timelineData = {
+                    labels: [
+                        wrapLabel('Welcome & Intro'), 
+                        wrapLabel('Expectations vs. Feedback'), 
+                        wrapLabel('Linking to Objectives'), 
+                        wrapLabel('Drafting Expectations'), 
+                        wrapLabel('Wrap-up & Next Steps')
+                    ],
+                    datasets: [{
+                        label: 'Time (minutes)',
+                        data: [7, 25, 20, 15, 5],
+                        backgroundColor: ['#004e92', '#0077b6', '#48cae4', '#ade8f4', '#fca311'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2,
+                    }]
+                };
+                new Chart(workshopTimelineCtx, {
+                    type: 'bar',
+                    data: timelineData,
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        ...sharedTooltipOptions,
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Duration (minutes)',
+                                    color: '#475569',
+                                    font: { size: 14 }
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        },
+                        plugins: {
+                            ...sharedTooltipOptions.plugins,
+                            legend: {
+                                display: false
+                            },
+                        }
+                    }
+                });
+            }
+
+            const quizData = [
+                { question: "Your code for the last feature had some syntax errors that caused deployment issues.", answer: "feedback" },
+                { question: "Moving forward, all React components must include PropTypes for type validation.", answer: "expectation" },
+                { question: "The user story you worked on last sprint was delivered on time, which was great.", answer: "feedback" },
+                { question: "We expect you to proactively communicate any potential delays on your current tasks at least 24 hours in advance.", answer: "expectation" },
+                { question: "When integrating new third-party libraries, ensure you conduct a security review and document findings before implementation.", answer: "expectation" },
+                { question: "During the last sprint review, your demo was very clear and engaging.", answer: "feedback" },
+                { question: "All C# .NET API endpoints must include comprehensive Swagger documentation by the end of this sprint.", answer: "expectation" }
+            ];
+
+            let currentQuestionIndex = 0;
+            const quizContainer = document.getElementById('quiz-container');
+            const questionEl = document.getElementById('quiz-question');
+            const optionsContainer = document.getElementById('quiz-options');
+            const feedbackEl = document.getElementById('quiz-feedback');
+            const nextButton = document.getElementById('quiz-next');
+            const progressEl = document.getElementById('quiz-progress');
+
+            function loadQuestion() {
+                if (currentQuestionIndex >= quizData.length) {
+                    quizContainer.innerHTML = `<div class="text-center"><h3 class="text-2xl font-bold text-slate-800 mb-4">Quiz Complete!</h3><p class="text-slate-600">You've mastered the difference between expectations and feedback.</p></div>`;
+                    return;
+                }
+                const currentQuestion = quizData[currentQuestionIndex];
+                questionEl.textContent = currentQuestion.question;
+                progressEl.textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+                feedbackEl.innerHTML = '';
+                nextButton.classList.add('hidden');
+                
+                const buttons = optionsContainer.querySelectorAll('button');
+                buttons.forEach(button => {
+                    button.disabled = false;
+                    button.className = 'quiz-option text-lg font-bold py-4 px-6 rounded-lg border-2 border-slate-300 text-slate-700 bg-slate-100';
+                });
+            }
+
+            optionsContainer.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'BUTTON') return;
+
+                const selectedAnswer = e.target.dataset.answer;
+                const correctAnswer = quizData[currentQuestionIndex].answer;
+                
+                const buttons = optionsContainer.querySelectorAll('button');
+                buttons.forEach(button => button.disabled = true);
+
+                if (selectedAnswer === correctAnswer) {
+                    e.target.classList.add('quiz-correct');
+                    feedbackEl.innerHTML = '<p class="font-bold text-teal-500">Correct!</p>';
+                } else {
+                    e.target.classList.add('quiz-incorrect');
+                    feedbackEl.innerHTML = `<p class="font-bold text-rose-500">Not quite! This is ${correctAnswer}.</p>`;
+                    buttons.forEach(button => {
+                        if (button.dataset.answer === correctAnswer) {
+                            button.classList.add('quiz-correct');
+                        }
+                    });
+                }
+                nextButton.classList.remove('hidden');
+                 if(currentQuestionIndex === quizData.length - 1) {
+                    nextButton.textContent = "Finish Quiz";
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentQuestionIndex++;
+                loadQuestion();
+            });
+
+            loadQuestion();
+
+            // Gemini API Integration for Expectation Architect
+            const objectiveInput = document.getElementById('objectiveInput');
+            const generateExpectationsBtn = document.getElementById('generateExpectationsBtn');
+            const expectationOutput = document.getElementById('expectationOutput');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const buttonText = document.getElementById('buttonText');
+            const errorMessage = document.getElementById('errorMessage');
+
+            generateExpectationsBtn.addEventListener('click', async () => {
+                const objective = objectiveInput.value.trim();
+                if (!objective) {
+                    errorMessage.textContent = "Please enter an objective to generate expectations.";
+                    errorMessage.classList.remove('hidden');
+                    return;
+                }
+
+                expectationOutput.innerHTML = ''; // Clear previous output
+                errorMessage.classList.add('hidden'); // Hide any previous error
+                loadingSpinner.classList.remove('hidden');
+                buttonText.textContent = 'Generating...';
+                generateExpectationsBtn.disabled = true;
+
+                try {
+                    let chatHistory = [];
+                    const prompt = `Generate a JSON object with 'what_expectations' (array of strings) and 'how_expectations' (array of strings) for the following objective: "${objective}". Focus on 2-3 specific, actionable points for each, suitable for an employee in a professional setting. The 'what_expectations' should be about tangible results and deliverables, and 'how_expectations' about behaviors, processes, and standards.`;
+                    chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+                    const payload = {
+                        contents: chatHistory,
+                        generationConfig: {
+                            responseMimeType: "application/json",
+                            responseSchema: {
+                                type: "OBJECT",
+                                properties: {
+                                    "what_expectations": {
+                                        "type": "ARRAY",
+                                        "items": { "type": "STRING" }
+                                    },
+                                    "how_expectations": {
+                                        "type": "ARRAY",
+                                        "items": { "type": "STRING" }
+                                    }
+                                },
+                                "propertyOrdering": ["what_expectations", "how_expectations"]
+                            }
+                        }
+                    };
+                    const apiKey = ""; 
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const jsonString = result.candidates[0].content.parts[0].text;
+                        const parsedJson = JSON.parse(jsonString);
+
+                        let outputHtml = '';
+                        if (parsedJson.what_expectations && parsedJson.what_expectations.length > 0) {
+                            outputHtml += '<h4 class="text-xl font-bold text-[#fca311] mb-2">What (Desired Results/Outputs):</h4>';
+                            outputHtml += '<ul class="list-disc list-inside text-slate-700 mb-4">';
+                            parsedJson.what_expectations.forEach(item => {
+                                outputHtml += `<li>${item}</li>`;
+                            });
+                            outputHtml += '</ul>';
+                        } else {
+                            outputHtml += '<p class="text-slate-600 mb-4">No "What" expectations generated.</p>';
+                        }
+
+                        if (parsedJson.how_expectations && parsedJson.how_expectations.length > 0) {
+                            outputHtml += '<h4 class="text-xl font-bold text-[#0077b6] mb-2">How (Desired Behaviors/Actions/Standards):</h4>';
+                            outputHtml += '<ul class="list-disc list-inside text-slate-700">';
+                            parsedJson.how_expectations.forEach(item => {
+                                outputHtml += `<li>${item}</li>`;
+                            });
+                            outputHtml += '</ul>';
+                        } else {
+                             outputHtml += '<p class="text-slate-600">No "How" expectations generated.</p>';
+                        }
+                        expectationOutput.innerHTML = outputHtml;
+
+                    } else {
+                        errorMessage.textContent = "Failed to generate expectations. Please try again.";
+                        errorMessage.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    console.error("Error generating expectations:", error);
+                    errorMessage.textContent = "An error occurred while generating expectations. Please check your input or try again later.";
+                    errorMessage.classList.remove('hidden');
+                } finally {
+                    loadingSpinner.classList.add('hidden');
+                    buttonText.textContent = 'Generate Expectations';
+                    generateExpectationsBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
